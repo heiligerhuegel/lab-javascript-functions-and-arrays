@@ -20,6 +20,7 @@ function findLongestWord(arr) {
   if(arr.length === 0){
     return null;
   }
+
   let longestword = "";
   for (let index = 0; index < arr.length; index++) {
     if(arr[index].length > longestword.length ){
@@ -252,7 +253,7 @@ function greatestProduct(array) {
   let max = 0;
 
   for (let a = 0; a < array.length-3; a++) {
-        for (let b = 0; b < array[a].length-4; b++) {
+        for (let b = 0; b < array[a].length-3; b++) {
 
           let x = array[a][b]*array[a][b+1]*array[a][b+2]*array[a][b+3];
           let y = array[a+1][b]*array[a+2][b]*array[a+3][b]*array[a+3][b];
