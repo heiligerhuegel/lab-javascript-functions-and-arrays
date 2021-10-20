@@ -248,7 +248,7 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct(matrix) {
+function greatestProduct(array) {
   let max = 0;
 
   for (let a = 0; a < array.length-3; a++) {
@@ -263,7 +263,7 @@ function greatestProduct(matrix) {
           if (y > max){
             max = y;
           }
-          console.log(max);
+          
       }
     
     }
