@@ -250,20 +250,27 @@ const matrix = [
 
 function greatestProduct(matrix) {
   let max = 0;
-  for (let a = 0; a < matrix.length; a++) {
-    for (let b = 0; b < matrix[a].length; b++) {
-      let x = matrix[a][b]*matrix[a+1][b]*matrix[a+2][b]*matrix[a+3][b];
-      let y = matrix[a][b]*matrix[a][b+1]*matrix[a][b+2]*matrix[a][b+3];
-      if(x > max){
-        max = x;
+
+  for (let a = 0; a < array.length-3; a++) {
+        for (let b = 0; b < array[a].length-4; b++) {
+
+          let x = array[a][b]*array[a][b+1]*array[a][b+2]*array[a][b+3];
+          let y = array[a+1][b]*array[a+2][b]*array[a+3][b]*array[a+3][b];
+
+          if(x > max){
+            max = x;
+          }
+          if (y > max){
+            max = y;
+          }
+          console.log(max);
       }
-      if (y > max){
-        max = y;
-      }
-  }
+    
+    }
+  
   return max; 
 }
-}
+
 
 
 
